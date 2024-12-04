@@ -306,6 +306,74 @@ body {
     transform: translateY(-3px);
     box-shadow: 2px 5px 10px rgba(0,0,0,0.3);
 }
+.security-info {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.security-badge {
+    color: #28a745;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.security-details {
+    margin-top: 1rem;
+    text-align: left;
+}
+
+.security-details summary {
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+.security-details ul {
+    margin-top: 0.5rem;
+    padding-left: 1.5rem;
+}
+
+.install-instructions {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.instructions-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 90%;
+}
+
+.instructions-content h3 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.instructions-content ol {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+.instructions-content button {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 1rem;
+}
 
 
 @keyframes bounce {

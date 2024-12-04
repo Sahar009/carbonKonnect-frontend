@@ -112,10 +112,22 @@
                    data-gtm-category="App Download"
                    data-gtm-action="click"
                    data-gtm-label="CarbonConnect APK"
-                   onclick="trackDownload(event)">
+                   onclick="handleDownload(event)">
                     <i class="fa-solid fa-download download-icon" style="color: #ebebeb;"></i>
                     Download Our App
                 </a>
+                <div class="security-info">
+                    <p class="security-badge"><i class="fas fa-shield-alt"></i> Verified Safe</p>
+                    <p class="file-info">APK File Size: 25MB | Version: 1.0.0</p>
+                    <details class="security-details">
+                        <summary>Why is this safe?</summary>
+                        <ul>
+                            <li>✓ App is signed with our security certificate</li>
+                            <li>✓ Scanned for malware</li>
+                            <li>✓ No harmful content detected</li>
+                        </ul>
+                    </details>
+                </div>
             </div>
         </div>
         <div id="contact" class="contact-section">
@@ -162,10 +174,11 @@
         </div>
     </div>
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/1234567890?text=Hello%20carbonKonnect" 
+    <a href="https://wa.me/070868614288?text=Hello%20carbonKonnect" 
        class="whatsapp-float" 
        target="_blank">
         <i class="fab fa-whatsapp"></i>
+       
     </a>
 </body>
 <script>
@@ -183,5 +196,7 @@
         'eventLabel': 'CarbonConnect APK'
     });
 }
+
 </script>
+<script src="index.js"></script>
 </html>
