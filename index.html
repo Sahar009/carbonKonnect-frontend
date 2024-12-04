@@ -48,8 +48,19 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <script src="https://kit.fontawesome.com/ece916bd56.js" crossorigin="anonymous"></script>
+        <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TDDRB9NT');</script>
+    <!-- End Google Tag Manager -->
     </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDDRB9NT"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <header class="header">
         <div class="logo">
             <img src="./asset/Carbon Connect-08.png" alt="carbonKonnect Logo" class="logo-img">
@@ -95,10 +106,51 @@
             </div>
             
             <div class="app-buttons">
-                <a href="./asset/carbonKonnect.apk" class="app-button" download="">
+                <a href="./asset/carbonKonnect.apk" 
+                   class="app-button" 
+                   download
+                   data-gtm-category="App Download"
+                   data-gtm-action="click"
+                   data-gtm-label="CarbonConnect APK"
+                   onclick="trackDownload(event)">
                     <i class="fa-solid fa-download download-icon" style="color: #ebebeb;"></i>
                     Download Our App
                 </a>
+            </div>
+        </div>
+        <div id="contact" class="contact-section">
+            <h2>Contact Us</h2>
+            <div class="contact-container">
+                <form class="contact-form" action="submit_form.php" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+        
+                <div class="social-links">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="https://twitter.com/carbonkonnect" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://linkedin.com/company/carbonkonnect" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://instagram.com/carbonkonnect" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://facebook.com/carbonkonnect" target="_blank">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -109,11 +161,27 @@
             <img src="/asset/Nature Talk-05.jpg"/>
         </div>
     </div>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/1234567890?text=Hello%20carbonKonnect" 
+       class="whatsapp-float" 
+       target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 </body>
 <script>
     // Add mobile menu functionality
     document.querySelector('.menu-toggle').addEventListener('click', function() {
         document.querySelector('nav').classList.toggle('active');
     });
+
+    function trackDownload(event) {
+    // Push the download event to dataLayer
+    window.dataLayer.push({
+        'event': 'app_download',
+        'eventCategory': 'App Download',
+        'eventAction': 'click',
+        'eventLabel': 'CarbonConnect APK'
+    });
+}
 </script>
 </html>
